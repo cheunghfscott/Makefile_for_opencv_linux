@@ -12,7 +12,7 @@ The following steps describe the way to use the makefiles.
 7.  This project folder as 3 subfolders- src, object, include ; and a Makefile needed for compilation.
 8.  The src folder stores all your .cpp files, include stores all the .h folders and .hpp files and object folder stores the generated object files.
 9.  Its important to note not to have any .h or .hpp files in the src folder. This may cause undesired errors.
-10. In order to compile your project, simply type "make" without the quotes in the command line with "your_project_name" folder as working directory.
+10. In order to compile your project, simply type "make" without the quotes in the terminal with "your_project_name" folder as working directory.
 11. This creates an executable(./*) file with your_project_name as its name.
 12. This executable can be run from either the terminal or by double clicking on it directly(for UBUNTU).
 
