@@ -17,4 +17,4 @@ The following steps describe the way to use the makefiles.
 12. This executable can be run from either the terminal or by double clicking on it directly(for UBUNTU).
 
 
-NOTE: It is assumed that you have opencv already installed on your computer before using this make file.
+NOTE: It is assumed that you have opencv already installed on your computer before using these make files.
