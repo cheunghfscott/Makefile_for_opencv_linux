@@ -1,0 +1,23 @@
+IDIR=include
+CXX=g++
+CFLAGS=-I$(IDIR) `pkg-config --cflags opencv`
+ODIR=object
+SDIR=src
+OFILE:=$(shell basename $(CURDIR))
+LIBS=`pkg-config --libs opencv`
+
+_OBJ:=$(patsubst %.cpp,%.o,$(wildcard $(SDIR)/*.cpp))
+OBJ=$(patsubst $(SDIR)/%,$(ODIR)/%,$(_OBJ))
+
+DEPS:=$(wildcard $(IDIR)/*.h)
+
+$(ODIR)/%.o:$(SDIR)/%.cpp $(DEPS)
+	$(CXX) -c -o $@ $< $(CFLAGS) $(LIBS)
+
+$(OFILE):$(OBJ)
+	$(CXX) -o $@ $^ $(CFLAGS) $(LIBS)
+
+.PHONY:clean
+
+clean:
+	rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~ $(OFILE)
