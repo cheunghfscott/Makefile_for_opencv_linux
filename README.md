@@ -15,3 +15,6 @@ The following steps describe the way to use the makefiles.
 10. In order to compile your project, simply type "make" without the quotes in the command line with "your_project_name" folder as working directory.
 11. This creates an executable(./*) file with your_project_name as its name.
 12. This executable can be run from either the command line or by double clicking on it directly(for UBUNTU).
+
+
+NOTE: It is assumed that you have opencv already installed on your computer before using this make file.
