@@ -1,5 +1,5 @@
 # Makefile_for_opencv_linux
-These Makefiles are meant to make compilation of Opencv projects on linux convenient with g++ compiler.
+These Makefiles are meant to make creation, organisation and compilation of Opencv projects on linux convenient with g++ compiler.
 
 The following steps describe the way to use the makefiles.
 
