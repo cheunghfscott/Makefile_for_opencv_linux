@@ -3,15 +3,16 @@ CXX=g++
 CFLAGS=-I$(IDIR) `pkg-config --cflags opencv`
 ODIR=object
 SDIR=src
+SRC=$(SDIR)/%.cpp $(SDIR)/%.cc
 OFILE:=$(shell basename $(CURDIR))
 LIBS=`pkg-config --libs opencv`
 
-_OBJ:=$(patsubst %.cpp,%.o,$(wildcard $(SDIR)/*.cpp))
+_OBJ:=$(patsubst %.cpp,%.o,$(wildcard $(SDIR)/*.cpp)) $(patsubst %.cc,%.o,$(wildcard $(SDIR)/*.cc))
 OBJ=$(patsubst $(SDIR)/%,$(ODIR)/%,$(_OBJ))
 
 DEPS:=$(wildcard $(IDIR)/*.h) $(wildcard $(IDIR)/*.hpp)
 
-$(ODIR)/%.o:$(SDIR)/%.cpp $(DEPS)
+$(ODIR)/%.o:$(SRC) $(DEPS)
 	$(CXX) -c -o $@ $< $(CFLAGS) $(LIBS)
 
 $(OFILE):$(OBJ)
