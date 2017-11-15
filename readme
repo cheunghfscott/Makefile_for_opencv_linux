@@ -2,3 +2,4 @@ to create an opencv project use the following command in the workspace root dir
 
 make opencv_project name=<project name>
 
+hi
