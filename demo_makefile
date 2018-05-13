@@ -1,6 +1,6 @@
 IDIR=include
 CXX=g++
-CFLAGS=-I$(IDIR) `pkg-config --cflags opencv`
+CFLAGS=-I$(IDIR) `pkg-config --cflags opencv` -std=c++11
 ODIR=object
 SDIR=src
 
